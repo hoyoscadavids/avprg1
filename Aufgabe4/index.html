@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="aufgabe4.js"></script><link rel="stylesheet" href="aufgabe4.css"></head>
+    <body>
+        <form  action="javascript:sound1()">
+             <input type="submit" id="sound1" value="Sound 1">
+
+        </form>
+        <form  action="javascript:sound2()">
+                <input type="submit" id="sound2" value="Sound 2">
+   
+           </form>
+           <form  action="javascript:sound3()">
+                <input type="submit" id="sound3" value="Sound 3">
+   
+           </form>
+           <form  action="javascript:sound1()">
+                <input type="submit" id="sound4" value="Sound 4">
+   
+           </form>
+           <form  action="javascript:stop()">
+                <input type="submit" id="stop" value="STOP">
+           </form>
+
+           <div class="slidecontainer">
+               <input type="range" min="16.35" max="1000" class="slider" id="noteRange" oninput="javascript:soundSlider()"
+                onchange="javascript:soundSlider()">
+
+           </div>
+    </body>
+</html>
