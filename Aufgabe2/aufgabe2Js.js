@@ -48,3 +48,12 @@ function showFrequency(){
     if(temp >= 0 && temp <= 127){document.getElementById("show").innerHTML = allFrequencies[temp];}
     else{document.getElementById("show").innerHTML = "Not valid input"}
 }
+
+var context = new AudioContext();
+var oscNode = context.createOscillator();
+var gainNode = context.createGain();
+oscNode.gain.value = 0.8;
+oscNode.frequency.value = 440;
+oscNode.connect(gainNode);
+gainNode.connect(context.destination);
+oscNode.start(context.currentTime);
